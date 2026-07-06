@@ -1,0 +1,23 @@
+<div class="container mt-5">
+
+<h1>User Dashboard</h1>
+
+<div class="card p-3">
+
+<h3>Name: {{ user.name }}</h3>
+
+<h3>Email: {{ user.email }}</h3>
+
+<h3>Total Quizzes Attempted: {{ total_quiz }}</h3>
+
+</div>
+
+<br>
+
+<a href="/ai_quiz" class="btn btn-primary">Start Quiz</a>
+
+<a href="/leaderboard" class="btn btn-warning">Leaderboard</a>
+
+<a href="/logout" class="btn btn-danger">Logout</a>
+
+</div>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exam AI Bot</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<h1>MCQ History</h1>
+
+{% for item in history %}
+
+<h3>Topic: {{ item.topic }}</h3>
+
+<pre>{{ item.questions }}</pre>
+
+<hr>
+
+{% endfor %}
+
+</body>
+
+</html>
