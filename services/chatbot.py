@@ -1,10 +1,14 @@
 import os
+from dotenv import load_dotenv
 from google import genai
+
+load_dotenv()
+
+print(os.getenv("GEMINI_API_KEY"))   # <-- Add this line
 
 client = genai.Client(
     api_key=os.getenv("GEMINI_API_KEY")
 )
-
 
 # Chatbot for exam questions
 def ask_ai(question):

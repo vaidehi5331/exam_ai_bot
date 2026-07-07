@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-7">
+
+            <div class="card shadow-lg border-0 rounded-4 text-center p-5">
+
+                <i class="bi bi-trophy-fill display-1 text-warning"></i>
+
+                <h1 class="mt-3">
+                    Quiz Completed!
+                </h1>
+
+                <p class="text-muted">
+                    Here is your performance.
+                </p>
+
+                <hr>
+
+                <h2 class="text-primary">
+
+                    {{ score }} / {{ total }}
+
+                </h2>
+
+                <h4>
+
+                    {{ percentage }}%
+
+                </h4>
+
+                {% if percentage >= 80 %}
+
+                <span class="badge bg-success fs-5">
+                    Excellent 🎉
+                </span>
+
+                {% elif percentage >= 60 %}
+
+                <span class="badge bg-primary fs-5">
+                    Good Job 👍
+                </span>
+
+                {% elif percentage >= 40 %}
+
+                <span class="badge bg-warning fs-5">
+                    Keep Practicing 🙂
+                </span>
+
+                {% else %}
+
+                <span class="badge bg-danger fs-5">
+                    Try Again 💪
+                </span>
+
+                {% endif %}
+
+                <div class="mt-5">
+
+                    <a href="/ai_quiz"
+                       class="btn btn-success btn-lg me-3">
+
+                        <i class="bi bi-arrow-repeat"></i>
+
+                        Retry Quiz
+
+                    </a>
+
+                    <a href="/dashboard"
+                       class="btn btn-primary btn-lg">
+
+                        <i class="bi bi-speedometer2"></i>
+
+                        Dashboard
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

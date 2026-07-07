@@ -1,27 +1,488 @@
+/* ==============================
+   Google Font
+================================= */
+
 body{
-    background-color: lightblue;
-}
-h1{
-    color: darkblue;
-    text-align: center;
-}
-p{
-    text-align: center;
-    font-size: 20px;
-}
-button{
-    background-color: green;
-    color: white;
-    padding: 10px;
-    margin: 10px;
-}
-div{
-    text-align:center;
-}
-body{
-    font-family: Arial;
+    font-family: 'Poppins', sans-serif;
+    background:#f5f7fb;
+    color:#333;
 }
 
-h1{
+/* ==============================
+   Navbar
+================================= */
+
+.navbar{
+    background:linear-gradient(90deg,#2563eb,#4f46e5)!important;
+}
+
+.navbar-brand{
+    font-size:24px;
+    font-weight:700;
+}
+
+.nav-link{
+    color:white!important;
+    margin-left:10px;
+    transition:.3s;
+}
+
+.nav-link:hover{
+    color:#ffd43b!important;
+}
+
+/* ==============================
+   Buttons
+================================= */
+
+.btn{
+    border-radius:10px;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.btn-primary{
+    background:#2563eb;
+    border:none;
+}
+
+.btn-success{
+    border:none;
+}
+
+.btn-danger{
+    border:none;
+}
+
+/* ==============================
+   Cards
+================================= */
+
+.card{
+    border:none;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 35px rgba(0,0,0,.15);
+}
+
+/* ==============================
+   Forms
+================================= */
+
+input,
+textarea,
+select{
+
+    border-radius:10px!important;
+    padding:12px!important;
+}
+
+form{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+/* ==============================
+   Tables
+================================= */
+
+table{
+
+    background:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+/* ==============================
+   Footer
+================================= */
+
+footer{
+
+    margin-top:80px;
+}
+
+footer a{
+
+    transition:.3s;
+}
+
+footer a:hover{
+
+    color:#ffd43b!important;
+}
+
+/* ==============================
+   Headings
+================================= */
+
+h1,h2,h3,h4,h5{
+
+    font-weight:700;
+}
+
+/* ==============================
+   Responsive
+================================= */
+
+@media(max-width:768px){
+
+.navbar-brand{
+
+font-size:20px;
+
+}
+
+form{
+
+padding:20px;
+
+}
+
+}
+
+body{
+    opacity:0;
+    transition:0.5s;
+}
+.hero{
+    min-height:85vh;
+    display:flex;
+    align-items:center;
+}
+
+.hero h1{
+    font-size:4rem;
+    font-weight:700;
+}
+
+.hero p{
+    font-size:1.25rem;
+    color:#555;
+}
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-12px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+.hero img{
+
+animation:float 3s ease-in-out infinite;
+
+}
+
+.card{
+    border:none;
+    border-radius:20px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.form-control{
+    border-radius:12px;
+    padding:12px;
+}
+
+.btn{
+    border-radius:12px;
+}
+
+body{
+    background:#f5f7fb;
+}
+.progress{
+    border-radius:20px;
+}
+
+.progress-bar{
+    border-radius:20px;
+}
+
+.form-check{
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.form-check:hover{
+    background:#eef4ff;
+    border-color:#2563eb;
+}
+
+.form-check-input{
+    transform:scale(1.2);
+}
+
+.form-check-label{
+    margin-left:10px;
+    cursor:pointer;
+    width:100%;
+}
+.card-img-top{
+
+    border-top-left-radius:20px;
+
+    border-top-right-radius:20px;
+
+}
+
+.card{
+
+    overflow:hidden;
+
+}
+
+.card:hover img{
+
+    transform:scale(1.05);
+
+    transition:.4s;
+
+}
+
+.badge{
+
+    font-size:14px;
+
+    padding:8px 14px;
+
+}
+.table{
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+.table tbody tr{
+
+    transition:.3s;
+
+}
+
+.table tbody tr:hover{
+
+    background:#eef4ff;
+
+    transform:scale(1.01);
+
+}
+
+.badge{
+
+    border-radius:20px;
+
+}
+/* ===========================
+   History Page
+=========================== */
+
+.history-box{
+
+    background:#f8f9fa;
+
+    border-radius:12px;
+
+    padding:15px;
+
+    white-space:pre-wrap;
+
+    font-size:14px;
+
+    max-height:300px;
+
+    overflow:auto;
+
+    border:1px solid #ddd;
+
+}
+
+.history-box::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.history-box::-webkit-scrollbar-thumb{
+
+    background:#2563eb;
+
+    border-radius:10px;
+
+}
+/* ===========================
+   Admin Panel
+=========================== */
+
+.table thead{
+
+    background:#1e293b;
+
+    color:white;
+
+}
+
+.table tbody tr{
+
+    transition:.3s;
+
+}
+
+.table tbody tr:hover{
+
+    background:#f1f5ff;
+
+}
+
+#searchUser{
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+/* ===========================
+   Result Page
+=========================== */
+
+.badge{
+
+    padding:10px 18px;
+
+    border-radius:20px;
+
+}
+
+.card h1{
+
+    font-weight:700;
+
+}
+
+.card h2{
+
+    font-size:50px;
+
+}
+
+.card h4{
+
+    color:#2563eb;
+
+}
+/* ===========================
+   Loading Screen
+=========================== */
+
+#loadingScreen{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(255,255,255,.95);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+}
+
+.spinner-box{
+
     text-align:center;
+
+}
+
+/* Dark Mode */
+
+.dark-mode {
+
+    background: #121212 !important;
+
+    color: white !important;
+
+}
+
+.dark-mode .card {
+
+    background: #1f1f1f !important;
+
+    color: white !important;
+
+}
+
+.dark-mode .navbar {
+
+    background: #000 !important;
+
+}
+
+.dark-mode .table {
+
+    color: white;
+
+}
+
+.dark-mode .form-control {
+
+    background: #2b2b2b;
+
+    color: white;
+
+    border: 1px solid #555;
+
+}
+
+.dark-mode .btn-outline-primary {
+
+    color: white;
+
+    border-color: white;
+
 }

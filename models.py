@@ -22,6 +22,10 @@ class User(db.Model):
         db.String(200),
         nullable=False
     )
+    profile_pic = db.Column(
+    db.String(200),
+    default="default.png"
+)
 
 class MCQHistory(db.Model):
 
@@ -61,3 +65,13 @@ class QuizScore(db.Model):
         db.Integer,
         nullable=False
     )
+
+class ChatHistory(db.Model):
+
+    id = db.Column(db.Integer, primary_key=True)
+
+    username = db.Column(db.String(100))
+
+    question = db.Column(db.Text)
+
+    answer = db.Column(db.Text)
